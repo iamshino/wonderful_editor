@@ -21,12 +21,11 @@
 require "rails_helper"
 
 RSpec.describe ArticleLike, type: :model do
-
   context "userとarticleが存在するとき" do
     let(:article_like) { build(:article_like) }
 
     it "likeできる" do
-    expect(article_like).to be_valid
+      expect(article_like).to be_valid
     end
   end
 
