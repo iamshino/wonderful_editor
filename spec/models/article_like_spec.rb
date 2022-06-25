@@ -21,5 +21,27 @@
 require "rails_helper"
 
 RSpec.describe ArticleLike, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context "userとarticleが存在するとき" do
+    let(:article_like) { build(:article_like) }
+    it "likeできる" do
+      expect(article_like).to be_valid
+    end
+  end
+
+  context "userのみ存在しないとき" do
+    let(:article_like) { build(:article_like, user_id: nil) }
+    it "likeできない" do
+      expect(article_like).to be_invalid
+      expect(article_like.errors.details[:user][0][:error]).to eq :blank
+    end
+  end
+
+  context "articleのみ存在しないとき" do
+    let(:article_like) { build(:article_like, article_id: nil) }
+
+    it "likeできない" do
+      expect(article_like).to be_invalid
+      expect(article_like.errors.details[:article][0][:error]).to eq :blank
+    end
+  end
 end
