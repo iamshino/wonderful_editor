@@ -7,6 +7,10 @@ AllCops:
     - "vendor/**/*" # rubocop config/default.yml
     - "db/schema.rb"
     - "bin/bundle"
+    - 'spec/models/user_spec.rb'
+    - 'spec/models/article_spec.rb'
+    - 'spec/models/comment_spec.rb'
+    - 'spec/models/article_like_spec.rb'
 
 #################### Layout ################################
 

@@ -30,7 +30,6 @@ RSpec.describe Article, type: :model do
 
   context "titleを指定していない時" do
     let(:article) { build(:article, title: nil) }
-
     it "エラーする" do
       expect(article).to be_invalid
       expect(article.errors.details[:title][0][:error]).to eq :blank
@@ -39,7 +38,6 @@ RSpec.describe Article, type: :model do
 
   context "bodyを指定していない時" do
     let(:article) { build(:article, body: nil) }
-
     it "エラーする" do
       expect(article).to be_invalid
       expect(article.errors.details[:body][0][:error]).to eq :blank

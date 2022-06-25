@@ -23,7 +23,6 @@ require "rails_helper"
 
 RSpec.describe Comment, type: :model do
   let(:comment) { build(:comment) }
-
   context "bodyを指定している時" do
     it "コメントが作成される" do
       expect(comment).to be_valid
