@@ -11,6 +11,7 @@ AllCops:
     - 'spec/models/article_spec.rb'
     - 'spec/models/comment_spec.rb'
     - 'spec/models/article_like_spec.rb'
+    - 'config/routes.rb'
 
 #################### Layout ################################
 
