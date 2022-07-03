@@ -13,6 +13,7 @@ AllCops:
     - 'spec/models/article_like_spec.rb'
     - 'config/routes.rb'
     - 'spec/requests/api/v1/base_api_spec.rb'
+    - 'spec/requests/api/v1/article_spec.rb'
 
 #################### Layout ################################
 
